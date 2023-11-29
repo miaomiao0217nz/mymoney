@@ -30,14 +30,8 @@ public class TagUtil {
         }
     }
 
-    private static Path getFilePath(String fileName) throws URISyntaxException, IOException {
-        URI uri = TagUtil.class.getClassLoader().getResource("mapping/" + fileName).toURI();
-        if ("jar".equals(uri.getScheme())) {
-            FileSystem fileSystem = FileSystems.newFileSystem(uri, Collections.emptyMap(), null);
-            return fileSystem.getPath("mapping/" + fileName);
-        } else {
-            return Paths.get(uri);
-        }
+    private static Path getFilePath(String fileName) {
+        return Paths.get("data/mapping/" + fileName);
     }
 
 

@@ -51,13 +51,7 @@ public class TransactionDao {
     }
 
     private Path getFolderPath() throws URISyntaxException, IOException {
-        URI uri = getClass().getClassLoader().getResource("anz").toURI();
-        if ("jar".equals(uri.getScheme())) {
-            FileSystem fileSystem = FileSystems.newFileSystem(uri, Collections.emptyMap(), null);
-            return fileSystem.getPath("anz");
-        } else {
-            return Paths.get(uri);
-        }
+        return Paths.get("data/anz/" );
     }
 
 

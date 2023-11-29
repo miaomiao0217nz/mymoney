@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'nz.co.harbour.jay'
-version '1.0-SNAPSHOT'
+version '1.0'
 
 repositories {
     mavenCentral()
@@ -30,3 +30,16 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+task appJar(type: Jar) {
+    group("build")
+    manifest {
+        attributes 'Main-Class': 'nz.co.harbour.jay.Main'
+    }
+    archiveBaseName = 'app'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+appJar.dependsOn(tasks['build'])
