@@ -1,0 +1,39 @@
+Concil Rate, Tax
+Fishing, Entertainment
+Life Insurance,Insurance
+Mortgage,House
+Transfer,Transfer
+Utilities,Utilities
+Salary,Salary
+Grocery,Food
+Health Insurance,Insurance
+Learning,Learning
+Vegi,Food
+Commute,Transportation
+Car,Transportation
+Home,House
+Social,Entertainment
+Restaurants,Food
+TV,Entertainment
+null,Unknown
+Tech,Entertainment
+Tax,Tax
+Donation,Entertainment
+House Insurance,Insurance
+Travel,Entertainment
+Gas,Transportation
+Cloth,Cloth
+Game,Entertainment
+Wine,Entertainment
+Gift,Social
+Coffee,Entertainment
+ATM,Cash
+Visa,Misc
+Swim,Entertainment
+Health,Medical
+Banking,Misc
+Larning,Learning
+Vic Learning,Learning
+Trademe,Misc
+Lib,Learning
+Unknown,Misc

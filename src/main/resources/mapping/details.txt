@@ -1,0 +1,124 @@
+06-0209-0803074-00, Transfer
+06-0209-0803074-01, Transfer
+06-0209-0803074-18, Transfer
+06-0209-0803074-88, Transfer
+06-0209-0803074-89, Transfer
+06-0229-0985872-01, Transfer
+1 Stop Asian Superma, Grocery
+4835-****-****-5440  Df
+4835-****-****-5440  If
+4835-****-****-7052  Df
+4835-****-****-7052  If
+A-Mart,Grocery
+Aia Nz, Life Insurance
+Angel'S Frozen Treat,Restaurants 
+Apl Fuel Stop Levin, Gas
+Art School, Learning
+Bank Charge, Banking
+Bank Of New Zealand, Salary
+Bhakti Lounge,Restaurants
+Burger King,Restaurants
+Castlepoint Holiday, Travel
+Citanz, Social
+Common Ground Cafe, Coffee
+Countdown Johnsonvil, Grocery
+Dive Wellington, Fishing
+Draw School, Larning
+Great Lake Holidaypa, Travel
+Gu&Qu ,Fishing
+Gull Pokeno, Gas
+Gull Waione, Gas
+Gull Wingate, Gas
+Inland Revenue Dept, Tax
+Jason, Transfer
+John Boyle Lt,Trademe
+Kenny, Transfer
+Kiwi Coffee & Kai, Restaurants
+Kiwi Fuels Petone, Gas
+Kiwi Fuels Tinakori, Gas
+Kristin Cooley, Car
+Liu F, Transfer
+Magic Wok, Restaurants
+Mcdonalds Johnsonvil, Restaurants
+Mcdonalds Lambton Qu, Restaurants
+Mcdonalds Petone,Restaurants
+Milk & Honey Cafe, Restaurants
+Mobil Johnsonville, Gas
+Moore Wilson'S, Grocery
+Mortgage, Mortgage
+Mr P J Thomson And , Trademe
+Ni Huimin, Transfer
+North City Porirua P, Restaurants
+Nzta Cps Clearing, Car
+One Stop Asian Super, Grocery
+Pak N Save Fuel Pori, Gas
+Pb Technologies, Tech
+Pb Technologies Peto, Tech
+Pioneer Bakery, Restaurants
+Steve, Vegi
+Qiannan Lyu, Transfer
+S Jack, Commute
+Southern Cross Healt,Health Insurance
+Subway Victoriaunive, Restaurants
+Superliquorjohnsonvi, Alcohol
+T Bay Cafe, Restaurants
+The Spice Rack, Grocery
+Tony, Car
+Trustpower, Utilities
+Trustpower Ltd,Utilities
+Umiya Sushi Royal Oa, Restaurants
+Vero Insuranc, House Insurance
+Vic Uni Tuition Fee, Vic Learning
+Wbc  W1A0525 Wbc 76 Johns, ATM
+Wbc  W1Ar536 41 Murphy St, ATM
+Wccrecreation, Learning
+Wellington High Scho, Restaurants
+Wgtn City Council, Concil Rate
+Wholly Bagels & Pizz, Restaurants
+Xu Min, Transfer
+Y Liu, Transfer
+Z Remutaka, Gas
+Msd - Department,Salary
+Abandoned Brewing Co,Alcohol
+Anz  S3C8448 188 Lambton,ATM
+Art Centre,Learning
+Bin Xing,Fishing
+Bp Hutt Road Truckst,Gas
+Brac & Bow,Restaurants
+Caltex Naenae,Gas
+Chinese Embassy,Visa
+Chumeez,Restaurants
+Everest Cafe,Restaurants
+Fed Up Fast Foods,Restaurants
+Harbour,Transfer
+Harbour Ltd,Transfer
+Harbour Ltd.,Transfer
+Hed 25 Aml,Tech
+I.R.D. 124-637-007,Tax
+Johnsonville Medical,Health
+Kiwi Fuels - Upper H,Gas
+Kiwi Fuels Tawa,Gas
+Liu Y,Transfer
+Matt Allen,Fishing
+Mojo Willis,Coffee
+Moore Wilson S,Grocery
+Muradia&Kalra,Transfer
+N. Patel,Transfer
+Nib Nz Ltd,Life Insurance
+Ocean Hunter,Fishing
+Pongaroa Fuelstop,Gas
+Porirua Service Stat,Car
+Repco,Car
+S Muradia,Transfer
+Seaview Service Stat,Car
+Shawn Bai,Commute
+Thordon School,Learning
+Towbar Express,Fishing
+Toyworld,Gift
+Vehicle Testing Stat,Car
+Visa Debit Card Fee,Transfer
+Wbc  W1Ar561 C/Down Lower,ATM
+X Bai,Commute
+Xie Qiming,Transfer
+Z Seaview,Gas
+Z Vic Corner,Gas
