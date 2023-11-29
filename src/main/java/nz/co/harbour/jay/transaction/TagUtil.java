@@ -8,6 +8,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+import static nz.co.harbour.jay.transaction.FileUtil.fileSystem;
+
 public class TagUtil {
     final private static Map<String, String> detailsMap;
     final private static Map<String, String> codeMap;
@@ -30,16 +32,22 @@ public class TagUtil {
         }
     }
 
+    //    private static Path getFilePath(String fileName) {
+//        return Paths.get("data/mapping/" + fileName);
+//    }
     private static Path getFilePath(String fileName) throws URISyntaxException, IOException {
         URI uri = TagUtil.class.getClassLoader().getResource("mapping/" + fileName).toURI();
         if ("jar".equals(uri.getScheme())) {
-            FileSystem fileSystem = FileSystems.newFileSystem(uri, Collections.emptyMap(), null);
+            if (fileSystem == null) {
+                Map<String, String> env = new HashMap<>();
+                env.put("create", "true");
+                fileSystem = FileSystems.newFileSystem(uri, env, null);
+            }
             return fileSystem.getPath("mapping/" + fileName);
         } else {
             return Paths.get(uri);
         }
     }
-
 
     private static Map<String, String> loadMap(String name) throws IOException, URISyntaxException {
         Path tagFile = getFilePath(name);

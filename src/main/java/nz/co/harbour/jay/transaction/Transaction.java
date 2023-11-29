@@ -105,4 +105,22 @@ public class Transaction {
     public String getRaw() {
         return raw;
     }
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "raw='" + raw + '\'' +
+                ", account='" + account + '\'' +
+                ", type='" + type + '\'' +
+                ", details='" + details + '\'' +
+                ", particulars='" + particulars + '\'' +
+                ", code='" + code + '\'' +
+                ", reference='" + reference + '\'' +
+                ", amount=" + amount +
+                ", date=" + date +
+                ", foreignCcyAmount='" + foreignCcyAmount + '\'' +
+                ", conversionCharge='" + conversionCharge + '\'' +
+                ", tag='" + tag + '\'' +
+                '}';
+    }
 }

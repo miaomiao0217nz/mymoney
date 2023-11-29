@@ -26,8 +26,10 @@ Rate,  Concil Rate
 Squash, Learning
 To Online, Transfer
 To Saver,Transfer
-Trustpower L, Utilites
+Trustpower L, Utilities
 Veg,Vegi
 Wbc  W1A0525, ATM
 Wbc  W1Ar536, ATM
-Wcc Rates,  Concil Rate
+Wcc Rates,  Concil Rate,
+Bai,Commute
+
