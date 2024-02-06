@@ -96,7 +96,7 @@ Eeny Meeny,Learning
 Four Square,Travel
 Freemans Lot,Restaurants
 Harvey Norma,Home
-Hobbiton Mov, Travel
+Hobbiton Mov,Travel
 Hutt City Co
 Hutt Valley,Restaurants
 Ib25782
@@ -272,3 +272,63 @@ Whitby Mall,Restaurants
 Wsl Johnsonv
 Wsl Wellingt,
 Z Vic,Gas
+Prodigygame,Game
+Taobao.Co,Coffee
+Prodigygame.,Game
+Mark Rammell
+Vf Card Conv
+Wsl Wellingt
+Pure Wellbei
+Wsl Johnsonv
+Lifestyle Sp
+Hutt City Co
+Px Convenien
+Taobao.Com,Coffee
+La Cloche Ce,Coffee
+Coffix Balla,Coffee
+New World Me,Grocery
+Penray Garde,Grocery
+Google Youtu,Movie
+The Lab Pres,Coffe
+Wcc Parking,Parking
+Robotimeonli,Learnings
+Gilmours Wel,Grocery
+Scopa Caffe,Coffee
+Gold Lining
+One Nz Ptpy,Utilities
+Skinny Mobil,Utilities
+Uber* Trip,Commute
+Mcdonalds Ma,Restaurants
+D4 On Feathe,Restaurants
+Mojo Feather,Coffee
+Aliexpress,Coffe
+Before Time
+Pak N Save U,Grocery
+Countdown Pe,Grocery
+Farmers Nort,Game
+Temu.Com,Grocery
+Bp Connect W,Gas
+One Nz Postp,Utilities
+One Nz Card,Utilities
+Uncle Bill'S,Grocery
+Pacific Radi,Medicine
+Pak N Save K,Grocery
+Tip Busker O
+Wellington I
+Finom Kitche,Restaurants
+Bp Connect U,Gas
+Fishermans T,Restaurants
+Hell Pizza B,Restaurants
+The Bond Spo
+Wellington C
+Paper Plus N,Learning
+New World Po,Grocery
+N B Mkt Gard
+Chicken On F,Grocery
+Event Queens,Movie
+El Rancho,Travel
+The Complete,Gift
+Space Place,Learning
+Museum Of We,Learning
+Superstart B,Travel
+Domino'S Piz,Restaurants

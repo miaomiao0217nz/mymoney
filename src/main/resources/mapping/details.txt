@@ -37,7 +37,7 @@ Kiwi Coffee & Kai, Restaurants
 Kiwi Fuels Petone, Gas
 Kiwi Fuels Tinakori, Gas
 Kristin Cooley, Car
-Liu F, Transfer
+Joe F, Transfer
 Magic Wok, Restaurants
 Mcdonalds Johnsonvil, Restaurants
 Mcdonalds Lambton Qu, Restaurants
@@ -76,7 +76,7 @@ Wellington High Scho, Restaurants
 Wgtn City Council, Concil Rate
 Wholly Bagels & Pizz, Restaurants
 Xu Min, Transfer
-Y Liu, Transfer
+Y Joe, Transfer
 Z Remutaka, Gas
 Msd - Department,Salary
 Abandoned Brewing Co,Alcohol
@@ -98,7 +98,7 @@ I.R.D. 124-637-007,Tax
 Johnsonville Medical,Health
 Kiwi Fuels - Upper H,Gas
 Kiwi Fuels Tawa,Gas
-Liu Y,Transfer
+Joe Y,Transfer
 Matt Allen,Fishing
 Mojo Willis,Coffee
 Moore Wilson S,Grocery
@@ -122,3 +122,43 @@ X Bai,Commute
 Xie Qiming,Transfer
 Z Seaview,Gas
 Z Vic Corner,Gas
+X Jack,Transfer
+Shawn Jack,Commute
+Yang Bnz,Transfer
+Wgtncitycouncil,Learning
+Knowledge Shop Nz,Learning
+Unarranged Overdraft Fee,Banking
+Liu F,Transfer
+Knowledgeshop,Learning
+Liu Y,Transfer
+Speeding,Fine
+Qi Ming Xie,Vegi
+S Bai,Commute
+Coffix Ballance,Coffee
+Aye Empanadas And Mo,Rest
+Jb Hi-Fi Wellington,Tech
+La Cloche Limited,Coffe
+Ki Sushi,Restaurants
+Pak N Save Lower Hut,Grocery
+Mcdonald'S Bunny St,Restaurants
+Super Cheap Auto,Gas
+Z Miramar,Gas
+Shake Bar Lagoon,Restaurants
+Forbidden City Resta,Restaurants
+Pak N Save Petone,Grocery
+Lions Club Tawa,Grocery
+Fujiyama Cafe & Fast,Restaurants
+Tj Katsu Lambton,Restaurants
+Newlands Pharmacy,Medicine
+New World Thorndon,Grocery
+Eb Games 315,Game
+K C Cafe,Restaurants
+Kaffee Eis Karts,Restaurants
+Burger Fuel Johnsonv,Restaurants
+Eb Games 307,Game
+Prestons Butchers,Grocery
+Event Queensgate,Movie
+Caltex Old Hutt Road,Gas
+Fujiyama Cafe,Restaurants
+Anz  S3A6850 Nth Lambton,Cash
+Moore Wilsons,Grocery

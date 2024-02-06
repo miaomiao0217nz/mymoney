@@ -1,22 +1,27 @@
 package nz.co.harbour.jay.transaction;
 
+import nz.co.harbour.jay.Main;
+
 import javax.sql.DataSource;
 import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.file.*;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
+
+import static java.util.Objects.isNull;
+import static nz.co.harbour.jay.transaction.FileUtil.fileSystem;
 
 
 public class TransactionDao {
+    private static final Logger LOGGER = Logger.getLogger(TransactionDao.class.getName());
 
 
-    private static final List<String> excludes = Arrays.asList("Salary", "House");
+    private static final List<String> excludes = Arrays.asList("Salary", "House", "Transfer");
     private final DataSource dataSource;
     private List<Transaction> cachedTransactions;
 
@@ -50,14 +55,28 @@ public class TransactionDao {
                 .collect(Collectors.toList());
     }
 
+//    private Path getFolderPath() throws URISyntaxException, IOException {
+//        return Paths.get("data/anz/" );
+//    }
+
     private Path getFolderPath() throws URISyntaxException, IOException {
-        return Paths.get("data/anz/" );
+        URI uri = getClass().getClassLoader().getResource("anz").toURI();
+        if ("jar".equals(uri.getScheme())) {
+            LOGGER.warning("");
+            if (fileSystem == null) {
+                Map<String, String> env = new HashMap<>();
+                env.put("create", "true");
+                fileSystem = FileSystems.newFileSystem(uri, env, null);
+            }
+            return fileSystem.getPath("anz");
+        } else {
+            return Paths.get(uri);
+        }
     }
 
 
     private List<Transaction> parseFolder(Path folder) {
         List<Transaction> transactions = new ArrayList<>();
-
         try {
             Files.walk(folder).forEach(p -> {
                 if (p == folder) {
@@ -76,6 +95,7 @@ public class TransactionDao {
     private List<Transaction> parseFile(Path sourceFilePath) {
         String fileName = sourceFilePath.getFileName().toString();
         String account = fileName.substring(0, 18);
+        LOGGER.warning("parsing:" + fileName);
         try {
 
             return Files.lines(sourceFilePath)
@@ -110,4 +130,20 @@ public class TransactionDao {
 //            writer.println(line);
 //        return transaction;
 //    }
+
+    public static void main(String[] args) {
+        TransactionDao transactionDao = new TransactionDao(null);
+        transactionDao.getTransactions(2023,1);
+
+
+
+        System.out.println("unknown codes:");
+        transactionDao.cachedTransactions.stream().filter(t->isNull(t.getTags())).map(t->t.getCode()).distinct().forEach(c->System.out.println(c));
+
+        System.out.println("unknown details:");
+        transactionDao.cachedTransactions.stream().filter(t->isNull(t.getTags())).map(t->t.getDetails()).distinct().forEach(c->System.out.println(c));
+
+        System.out.println("unknown coParticulars:");
+        transactionDao.cachedTransactions.stream().filter(t->isNull(t.getTags())).map(t->t.getParticulars()).distinct().forEach(c->System.out.println(c));
+    }
 }

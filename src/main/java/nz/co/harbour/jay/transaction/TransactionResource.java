@@ -14,6 +14,7 @@ public class TransactionResource {
     @Inject
     private TransactionDao transactionDao;
 
+
     @Path("/{year}/{month}/")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
