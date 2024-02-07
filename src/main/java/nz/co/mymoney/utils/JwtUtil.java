@@ -3,34 +3,38 @@ package nz.co.mymoney.utils;
 import io.jsonwebtoken.*;
 import jakarta.servlet.http.HttpServletRequest;
 import nz.co.mymoney.security.User;
+import org.springframework.stereotype.Component;
+import org.springframework.util.ObjectUtils;
 
 import javax.naming.AuthenticationException;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 
-
+@Component
 public class JwtUtil {
-    private final String secretKey ;
-    private long accessTokenValidity = 60*60*1000;
+    private final String secretKey;
+    private long accessTokenValidity = 1000 * 60 * 60;
 
     private final JwtParser jwtParser;
 
     private final String TOKEN_HEADER = "Authorization";
     private final String TOKEN_PREFIX = "Bearer ";
 
-    public JwtUtil(String secretKey){
-        this.secretKey=secretKey;
+    public JwtUtil() {
+        String secretKey = System.getenv("API_SECRET");
+        if (ObjectUtils.isEmpty(secretKey))
+            secretKey = "test";
+        this.secretKey = secretKey;
         this.jwtParser = Jwts.parser().setSigningKey(secretKey);
     }
 
     public String createToken(User user) {
         Claims claims = Jwts.claims().setSubject(user.getEmail());
-        claims.put("firstName",user.getFirstName());
-        claims.put("lastName",user.getLastName());
+        claims.put("firstName", user.getFirstName());
+        claims.put("lastName", user.getLastName());
         Date tokenCreateTime = new Date();
-        Date tokenValidity = new Date(tokenCreateTime.getTime() + TimeUnit.MINUTES.toMillis(accessTokenValidity));
+        Date tokenValidity = new Date(tokenCreateTime.getTime() + accessTokenValidity);
         return Jwts.builder()
                 .setClaims(claims)
                 .setExpiration(tokenValidity)
