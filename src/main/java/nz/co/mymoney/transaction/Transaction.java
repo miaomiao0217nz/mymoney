@@ -1,31 +1,43 @@
-package nz.co.harbour.jay.transaction;
+package nz.co.mymoney.transaction;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import nz.co.mymoney.ingestion.tagging.TagUtil;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
 
+
+@Entity(name = "transaction")
 public class Transaction {
-    final private String raw;
-    final private String account;
-    final private String type;
-    final private String details;
-    final private String particulars;
-    final private String code;
-    final private String reference;
-    final private double amount;
-    final private LocalDate date;
-    final private String foreignCcyAmount;
-    final private String conversionCharge;
+
+    private @Id
+    @GeneratedValue Long id;
+    private long userId;
+
+    private String raw;
+    private String account;
+    private String type;
+    private String details;
+    private String particulars;
+    private String code;
+    private String reference;
+    private double amount;
+    private LocalDate date;
+    private String foreignCcyAmount;
+    private String conversionCharge;
 
     private String tag;
 
     final private static DateTimeFormatter DF = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-    public Transaction(String account, String csvLine) {
+    public Transaction() {
+    }
+
+    public Transaction(long userId, String account, String csvLine) {
+        this.userId = userId;
         raw = csvLine;
         this.account = account;
         String[] columns = csvLine.split(",");
@@ -48,7 +60,7 @@ public class Transaction {
     }
 
     public void tag(String newTag) {
-       this.tag = newTag;
+        this.tag = newTag;
     }
 
     public String getTags() {

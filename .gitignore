@@ -6,3 +6,5 @@ tag/
 src/main/resources/anz/
 
 html
+
+*.zip
