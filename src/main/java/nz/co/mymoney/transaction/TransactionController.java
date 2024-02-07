@@ -13,7 +13,7 @@ import java.util.List;
 import static java.time.format.DateTimeFormatter.ISO_DATE;
 
 @RestController
-@RequestMapping("/transaction")
+@RequestMapping("/api/transaction")
 public class TransactionController {
     @Autowired
     TransactionRepository transactionRepository;

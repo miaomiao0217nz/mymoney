@@ -1,7 +1,5 @@
 package nz.co.mymoney.security;
 
-import nz.co.mymoney.security.User;
-import nz.co.mymoney.security.UserRepository;
 import nz.co.mymoney.utils.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

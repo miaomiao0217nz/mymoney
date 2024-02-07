@@ -13,7 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 
 @RestController
-@RequestMapping("/upload")
+@RequestMapping("/api/upload")
 public class UploadController {
 
     @Autowired
@@ -27,4 +27,6 @@ public class UploadController {
                 ts -> transactionRepository.saveAll(ts).size());
         return new ResponseEntity(HttpStatus.OK);
     }
+
+
 }

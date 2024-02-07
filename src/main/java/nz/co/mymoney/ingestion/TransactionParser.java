@@ -40,8 +40,9 @@ public class TransactionParser {
     private List<Transaction> parseFileStream(InputStream inputStream, String fileName) {
         String account = fileName.substring(0, 18);
         LOGGER.warning("parsing:" + fileName);
-        try (InputStreamReader isr = new InputStreamReader(inputStream);
-             BufferedReader br = new BufferedReader(isr)) {
+        try  {
+            InputStreamReader isr = new InputStreamReader(inputStream);
+            BufferedReader br = new BufferedReader(isr);
             String line = br.readLine();
             List<Transaction> transactions = new ArrayList<>();
             do {
