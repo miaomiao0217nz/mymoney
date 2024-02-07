@@ -1,16 +1,17 @@
-package nz.co.harbour.jay.transaction;
+package nz.co.mymoney.ingestion.tagging;
+
+import nz.co.mymoney.transaction.Transaction;
 
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.file.*;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-import static nz.co.harbour.jay.transaction.FileUtil.fileSystem;
-
 public class TagUtil {
+    public static FileSystem fileSystem;
+
     final private static Map<String, String> detailsMap;
     final private static Map<String, String> codeMap;
     final private static Map<String, String> referenceMap;
@@ -31,10 +32,6 @@ public class TagUtil {
             throw new RuntimeException(e);
         }
     }
-
-    //    private static Path getFilePath(String fileName) {
-//        return Paths.get("data/mapping/" + fileName);
-//    }
     private static Path getFilePath(String fileName) throws URISyntaxException, IOException {
         URI uri = TagUtil.class.getClassLoader().getResource("mapping/" + fileName).toURI();
         if ("jar".equals(uri.getScheme())) {
