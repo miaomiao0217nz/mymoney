@@ -1,6 +1,8 @@
 package nz.co.mymoney.security;
 
 
+import nz.co.mymoney.user.User;
+import nz.co.mymoney.user.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -22,7 +24,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         User user = userRepository.findUserByEmail(email);
         List<String> roles = new ArrayList<>();
-        roles.add("USER");
+        roles.add(user.getRole());
         UserDetails userDetails =
                 org.springframework.security.core.userdetails.User.builder()
                         .username(user.getEmail())

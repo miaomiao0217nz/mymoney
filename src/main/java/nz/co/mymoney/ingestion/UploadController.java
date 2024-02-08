@@ -13,7 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 
 @RestController
-@RequestMapping("/api/upload")
+@RequestMapping("/api")
 public class UploadController {
 
     @Autowired
@@ -21,7 +21,7 @@ public class UploadController {
     @Autowired
     TransactionRepository transactionRepository;
 
-    @PostMapping("/{type}")
+    @PostMapping("/upload/{type}")
     public ResponseEntity handleFileUpload(@RequestParam("file") MultipartFile file) throws IOException {
         transactionParser.parseAndImport(file.getInputStream(), file.getOriginalFilename(),
                 ts -> transactionRepository.saveAll(ts).size());

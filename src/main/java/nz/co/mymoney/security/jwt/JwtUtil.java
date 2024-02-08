@@ -1,8 +1,8 @@
-package nz.co.mymoney.utils;
+package nz.co.mymoney.security.jwt;
 
 import io.jsonwebtoken.*;
 import jakarta.servlet.http.HttpServletRequest;
-import nz.co.mymoney.security.User;
+import nz.co.mymoney.user.User;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
 
@@ -33,6 +33,7 @@ public class JwtUtil {
         Claims claims = Jwts.claims().setSubject(user.getEmail());
         claims.put("firstName", user.getFirstName());
         claims.put("lastName", user.getLastName());
+        claims.put("role", user.getRole());
         Date tokenCreateTime = new Date();
         Date tokenValidity = new Date(tokenCreateTime.getTime() + accessTokenValidity);
         return Jwts.builder()
@@ -71,12 +72,8 @@ public class JwtUtil {
         return null;
     }
 
-    public boolean validateClaims(Claims claims) throws AuthenticationException {
-        try {
-            return claims.getExpiration().after(new Date());
-        } catch (Exception e) {
-            throw e;
-        }
+    public boolean validateClaims(Claims claims) {
+        return claims.getExpiration().after(new Date());
     }
 
     public String getEmail(Claims claims) {

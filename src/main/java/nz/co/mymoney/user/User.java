@@ -1,14 +1,12 @@
-package nz.co.mymoney.security;
+package nz.co.mymoney.user;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Entity(name = "user")
+@Entity
 @Table(name = "users")
-
 public class User {
 
     private @Id
@@ -18,6 +16,7 @@ public class User {
     private String lastName;
     private String password;
     private String email;
+    private String role;
     public User(){}
 
 
@@ -43,5 +42,9 @@ public class User {
 
     public String getEmail() {
         return email;
+    }
+
+    public String getRole() {
+        return role;
     }
 }
