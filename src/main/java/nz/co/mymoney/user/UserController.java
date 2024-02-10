@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Objects;
+
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
@@ -20,6 +22,8 @@ public class UserController {
     public ResponseEntity<User> getTransactions() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User user = userRepository.findUserByEmail(authentication.getName());
-        return new ResponseEntity<>(user, HttpStatus.OK);
+        if (Objects.nonNull(user))
+            return new ResponseEntity<>(user, HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.FORBIDDEN);
     }
 }
