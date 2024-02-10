@@ -15,8 +15,8 @@ import static java.util.Objects.nonNull;
 @RestController
 public class AuthController {
     private final UserRepository userRepository;
-    private final  PasswordEncoder passwordEncoder;
-    private final  JwtUtil jwtUtil;
+    private final PasswordEncoder passwordEncoder;
+    private final JwtUtil jwtUtil;
 
     public AuthController(UserRepository userRepository, PasswordEncoder passwordEncoder, JwtUtil jwtUtil) {
         this.userRepository = userRepository;
@@ -24,8 +24,8 @@ public class AuthController {
         this.jwtUtil = jwtUtil;
     }
 
-    @PostMapping("/login")
-    public ResponseEntity login(@RequestBody LoginRequest loginRequest) {
+    @PostMapping("/token")
+    public ResponseEntity getToken(@RequestBody LoginRequest loginRequest) {
         User user = userRepository.findUserByEmail(loginRequest.getEmail());
         if (nonNull(user)) {
             String password = loginRequest.getPassword();
@@ -36,5 +36,18 @@ public class AuthController {
             }
         }
         return new ResponseEntity(HttpStatus.FORBIDDEN);
+    }
+
+    @PostMapping("/register")
+    public ResponseEntity register(@RequestBody User user) {
+        if (user.getEmail() != null && user.getEmail().contains("@")) {
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
+            user.setRole("USER");
+            user = userRepository.save(user);
+            String token = jwtUtil.createToken(user);
+            return new ResponseEntity(token, HttpStatus.OK);
+        }
+
+        return new ResponseEntity(HttpStatus.BAD_REQUEST);
     }
 }

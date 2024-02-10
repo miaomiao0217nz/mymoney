@@ -6,7 +6,6 @@ import nz.co.mymoney.user.User;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
 
-import javax.naming.AuthenticationException;
 import java.util.Date;
 import java.util.List;
 
@@ -14,7 +13,7 @@ import java.util.List;
 @Component
 public class JwtUtil {
     private final String secretKey;
-    private long accessTokenValidity = 1000 * 60 * 60;
+    private long accessTokenValidity = 1000 * 60 * 60 * 24;
 
     private final JwtParser jwtParser;
 
