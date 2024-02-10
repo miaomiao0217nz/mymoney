@@ -43,7 +43,7 @@ jar {
 
 
 azurewebapp {
-    subscription = '46cbf7bd-bc20-4421-be1f-4084d4dd5b39'
+    subscription = '--'
     resourceGroup = 'MyMoney'
     appName = 'Sohpie0217nzMyMoneyApi'
     pricingTier = 'F1'
@@ -54,7 +54,7 @@ azurewebapp {
         javaVersion = 'Java 17'
     }
     appSettings {
-        PASS = "wyd1ber"
+        PASS = ""
     }
     auth {
         type = 'oauth2' // support azure_cli, oauth2, device_code and service_principal
