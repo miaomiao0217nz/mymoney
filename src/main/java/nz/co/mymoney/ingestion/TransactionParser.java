@@ -19,7 +19,7 @@ import java.util.zip.ZipInputStream;
 public class TransactionParser {
     private static final Logger LOGGER = Logger.getLogger(TransactionParser.class.getName());
 
-    public Integer parseAndImport(InputStream is, String fileName, Function<List<Transaction>, Integer> importer)
+    public Integer parseAndImport(long userId, InputStream is, String fileName, Function<List<Transaction>, Integer> importer)
             throws IOException {
         if (fileName.toLowerCase().endsWith("zip")) {
             int i = 0;
@@ -28,26 +28,26 @@ public class TransactionParser {
                 ZipEntry ze = zipInputStream.getNextEntry();
                 while (ze != null) {
                     if (!ze.isDirectory())
-                        i += importer.apply(parseFileStream(zipInputStream, ze.getName()));
-                    ze  = zipInputStream.getNextEntry();
+                        i += importer.apply(parseFileStream(userId, zipInputStream, ze.getName()));
+                    ze = zipInputStream.getNextEntry();
                 }
             }
             return i;
         } else
-            return importer.apply(parseFileStream(is, fileName));
+            return importer.apply(parseFileStream(userId, is, fileName));
     }
 
-    private List<Transaction> parseFileStream(InputStream inputStream, String fileName) {
+    private List<Transaction> parseFileStream(long userId, InputStream inputStream, String fileName) {
         String account = fileName.substring(0, 18);
         LOGGER.warning("parsing:" + fileName);
-        try  {
+        try {
             InputStreamReader isr = new InputStreamReader(inputStream);
             BufferedReader br = new BufferedReader(isr);
             String line = br.readLine();
             List<Transaction> transactions = new ArrayList<>();
             do {
                 if (!line.startsWith("Type"))
-                    transactions.add(new Transaction(0, account, line));
+                    transactions.add(new Transaction(userId, account, line));
                 line = br.readLine();
             } while (line != null);
             return Collections.unmodifiableList(transactions);

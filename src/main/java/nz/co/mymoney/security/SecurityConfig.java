@@ -1,7 +1,6 @@
 package nz.co.mymoney.security;
 
 import nz.co.mymoney.security.jwt.ApiJwtAuthorizationFilter;
-import org.apache.catalina.filters.CorsFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -14,10 +13,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import java.util.Arrays;
 import java.util.Collections;
-
-import static java.util.Arrays.*;
 
 @Configuration
 @EnableWebSecurity
@@ -31,8 +27,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChainApi(HttpSecurity http,
                                               ApiJwtAuthorizationFilter apiJwtAuthorizationFilter,
-                                              UrlBasedCorsConfigurationSource source) throws Exception
-    {
+                                              UrlBasedCorsConfigurationSource source) throws Exception {
         http.authorizeHttpRequests((authz) -> authz.anyRequest().authenticated())
                 .csrf(csrf -> csrf.disable())
                 .cors(cors -> cors.configurationSource(source))
