@@ -16,8 +16,12 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-security'
+
     implementation 'io.jsonwebtoken:jjwt:0.9.1'
     implementation 'javax.xml.bind:jaxb-api:2.3.1'
+
+    implementation 'ml.dmlc:xgboost4j_2.13:2.0.3'
+    implementation 'ml.dmlc:xgboost-jvm_2.13:2.0.3'
 
     runtimeOnly 'com.h2database:h2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -41,12 +45,11 @@ jar {
     }
 }
 
-
 azurewebapp {
-    subscription = '--'
+    subscription = '-'
     resourceGroup = 'MyMoney'
     appName = 'Sohpie0217nzMyMoneyApi'
-    pricingTier = 'F1'
+    pricingTier = 'B1'
     region = 'Australia East'
     runtime {
         os = 'Linux'
@@ -54,7 +57,7 @@ azurewebapp {
         javaVersion = 'Java 17'
     }
     appSettings {
-        PASS = ""
+        PASS = "wyd1ber"
     }
     auth {
         type = 'oauth2' // support azure_cli, oauth2, device_code and service_principal

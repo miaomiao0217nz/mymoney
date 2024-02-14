@@ -16,7 +16,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 @Component
@@ -38,13 +37,11 @@ public class ApiJwtAuthorizationFilter extends OncePerRequestFilter {
         String error = "Invalid Token";
         try {
             if (accessToken != null) {
-                System.out.println("token : " + accessToken);
                 Claims claims = jwtUtil.resolveClaims(request);
 
                 if (claims != null & jwtUtil.validateClaims(claims)) {
                     String email = claims.getSubject();
                     String role = (String) claims.get("role");
-                    System.out.println("email : " + email);
 
                     Authentication authentication = new UsernamePasswordAuthenticationToken(email, "", Arrays.asList(roleToGrantedAuthority(role)));
                     SecurityContextHolder.getContext().setAuthentication(authentication);
