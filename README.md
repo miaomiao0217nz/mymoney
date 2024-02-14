@@ -1,6 +1,9 @@
 # My Money
 A single page web application to report user's income and expenses based on bank card transactions exported from online banking systems(currently support ANZ csv format)\
-It is currently hosted at [My Money](https://sohpie0217nzmymoneyapi.azurewebsites.net/)
+The key issue it tries to address is telling user where are their money go\ 
+It automatically tags user's transactions into different categories based on a few dictionary files.\
+It is currently hosted at <a href="https://sohpie0217nzmymoneyapi.azurewebsites.net/" target="_blank">MyMoney on Azure</a>
+
 # Technology Stack
 ## React
 A website template from MUI is obtained to provide styles and main web frames.
@@ -28,6 +31,10 @@ Get user transactions from browser after login
 
 Expect requests used for login (to obtain token) and signup
 
+## Data Import
+The application is able to process csv file exported from ANZ online bank. It also allows user to pack multi files in to one zip file, which will be recursively processed by the java backend.\
+Support of files from other banks could be added. but it seems not an ideal solution. Importing data from Bank's API with user's consent would be the ideal solution.       
+
 ## Expense Tagging
 The application implemented a rule based tagging mechanism, which tags transactions based on a few existing dictionary files.
 It may not able to cover new user's transaction data. \
@@ -35,6 +42,8 @@ Common approach could be adding a few new pages to maintain a category table, an
 An ideal  solution would be introducing some machine learning mechanism and learn from existing data and do a pre-categorize, and let user review/correct the category. System will be getting smarter and smarter, and eventually able to categorize transactions without user interference.\
 I'm actively working on introducing xgboost for this part. 
 
-
+## Data Privacy
+The biggest challenge for the application to be used by public would be data privacy, sharing ones bank transactions to an unknown website would be a big concern for most people.\
+Maybe an App that runs on mobile device that does not upload any data to third party is a better option for such features. 
 
 
