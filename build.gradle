@@ -20,9 +20,6 @@ dependencies {
     implementation 'io.jsonwebtoken:jjwt:0.9.1'
     implementation 'javax.xml.bind:jaxb-api:2.3.1'
 
-    implementation 'ml.dmlc:xgboost4j_2.13:2.0.3'
-    implementation 'ml.dmlc:xgboost-jvm_2.13:2.0.3'
-
     runtimeOnly 'com.h2database:h2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

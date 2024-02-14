@@ -22,6 +22,12 @@ As the application is only for demo purpose, not persisting user's bank transact
 As the application is intended to be hosted in public cloud, to secure communication between React and Backend, Json Web Token is used for api calls.
 Expect requests used for login (to obtain token) and signup
 
+## Expense Tagging
+The application implemented a rule based tagging mechanism, which tags transactions based on a few existing dictionary files.
+It may not able to cover new user's transaction data. 
+Common approach could be adding a few new pages to maintain a category table, and allow user to select uncategorized transactions. But this is not an ideal solution, as it would be too much work thus impacting user experience.
+An ideal  solution would be introducing some machine learning mechanism and learn from existing data and do a pre-categorize, and let user review/correct the category. System will be getting smarter and smarter, and eventually able to categorize transactions without user interference.
+I'm actively working on introducing xgboost for this part. 
 
 
 
