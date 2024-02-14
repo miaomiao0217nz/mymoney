@@ -20,6 +20,12 @@ As the application is only for demo purpose, not persisting user's bank transact
 
 ## Security
 As the application is intended to be hosted in public cloud, to secure communication between React and Backend, Json Web Token is used for api calls.
+User login Sequence:
+![sequence](login.png "User login Sequence Diagram")
+
+Get user transactions from browser after login
+![sequence](getTransaction.png "Get Transactions Sequence Diagram")
+
 Expect requests used for login (to obtain token) and signup
 
 ## Expense Tagging

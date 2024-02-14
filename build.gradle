@@ -43,7 +43,7 @@ jar {
 }
 
 azurewebapp {
-    subscription = '-'
+    subscription = '--'
     resourceGroup = 'MyMoney'
     appName = 'Sohpie0217nzMyMoneyApi'
     pricingTier = 'B1'
