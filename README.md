@@ -39,7 +39,7 @@ Support of files from other banks could be added. but it seems not an ideal solu
 The application implemented a rule based tagging mechanism, which tags transactions based on a few existing dictionary files.
 It may not able to cover new user's transaction data. \
 Common approach could be adding a few new pages to maintain a category table, and allow user to select uncategorized transactions. But this is not an ideal solution, as it would be too much work thus impacting user experience.\
-An ideal  solution would be introducing some machine learning mechanism and learn from existing data and do a pre-categorize, and let user review/correct the category. System will be getting smarter and smarter, and eventually able to categorize transactions without user interference.\
+An ideal  solution would be introducing some machine learning mechanism and learn from existing data and do a pre-categorize, and let user review/correct the category. System will be getting smarter and smarter, and eventually able to categorize transactions without user interference.
 
 ## Data Privacy
 The biggest challenge for the application to be used by public would be data privacy, sharing ones bank transactions to an unknown website would be a big concern for most people.\
