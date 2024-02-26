@@ -29,7 +29,7 @@ User login Sequence:
 Get user transactions from browser after login
 ![sequence](getTransaction.png "Get Transactions Sequence Diagram")
 
-Expect requests used for login (to obtain token) and signup
+Except requests used for login (to obtain token) and signup
 
 ## Data Import
 The application is able to process csv file exported from ANZ online bank. It also allows user to pack multi files in to one zip file, which will be recursively processed by the java backend.\
