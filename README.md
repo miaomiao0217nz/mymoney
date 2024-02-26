@@ -1,6 +1,6 @@
 # My Money
 A single page web application to report user's income and expenses based on bank card transactions exported from online banking systems(currently support ANZ csv format)\
-The key issue it tries to address is telling user where are their money go\ 
+The key issue it tries to address is telling user where were their money spent.
 It automatically tags user's transactions into different categories based on a few dictionary files.\
 It is currently hosted at <a href="https://sohpie0217nzmymoneyapi.azurewebsites.net/" target="_blank">MyMoney on Azure</a>
 
@@ -23,10 +23,10 @@ As the application is only for demo purpose, not persisting user's bank transact
 
 ## Security
 As the application is intended to be hosted in public cloud, to secure communication between React and Backend, Json Web Token is used for api calls.
-User login Sequence:
+User login Sequence:\
 ![sequence](login.png "User login Sequence Diagram")
 
-Get user transactions from browser after login
+Get user transactions from browser after login\
 ![sequence](getTransaction.png "Get Transactions Sequence Diagram")
 
 Except requests used for login (to obtain token) and signup
